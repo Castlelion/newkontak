@@ -1,0 +1,55 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css'%}">
+</head>
+
+<body>
+    
+    {% include 'pkl/layout/nav.html' %}
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">No</th>
+                            <th scope="col">Nama</th>
+                            <th scope="col">Kategori</th>
+                            <th scope="col">Bidang</th>
+                            <th scope="col">alamat</th>
+                            <th scope="col">Nama PIC</th>
+                            <th scope="col">Jabatan</th>
+                            <th scope="col">No Telp</th>
+                            <th scope="col">Email</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for x in perusahaan %}
+                        <tr>
+                            <th scope="row">{{ forloop.counter }}</th>
+                            <td>{{ x.nama }}</td>
+                            <td>{{ x.kategori }}</td>
+                            <td>{{ x.bidang }}</td>
+                            <td>{{ x.alamat }}</td>
+                            <td>{{ x.nama_pic }}</td>
+                            <td>{{ x.jabatan }}</td>
+                            <td>{{ x.no_tlp }}</td>
+                            <td>{{ x.email }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+
+            <script src="{% static 'bootstrap/js/bootstrap.min.js'%}"></script>
+</body>
+
+</html>

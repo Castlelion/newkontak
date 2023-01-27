@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Siswa</title>
+  <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css'%}">
+</head>
+
+<body>
+  {% include 'pkl/layout/nav.html' %} 
+
+
+  <div class="container">
+    <div class="row">
+      <div class="mt-4">
+        <table class="table table-light table-hover table-striped">
+          <thead>
+            <tr>
+              <th scope="col" class="text-center">No</th>
+              <th scope="col" class="text-center">NISN</th>
+              <th scope="col" class="text-center">Nama Siswa</th>
+              <th scope="col" class="text-center">Jenis Kelamin</th>
+              <th scope="col" class="text-center">Email</th>
+              <th scope="col" class="text-center">No HP</th>
+              <th scope="col" class="text-center">Asal Sekolah</th>
+              <th scope="col" class="text-center">Alamat</th>
+              <th scope="col" class="text-center">Tempat Lahir</th>
+              <th scope="col" class="text-center">Tanggal Lahir</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for x in siswa %}
+            <tr>
+              <th scope="row">{{ forloop.counter }}</th>
+              <td>{{ x.NISN }}</td>
+              <td>{{ x.Nama }}</td>
+              <td>{{ x.Jenis_Kelamin }}</td>
+              <td>{{ x.Email }}</td>
+              <td>{{ x.Hp }}</td>
+              <td>{{ x.Asal_Sekolah }}</td>
+              <td>{{ x.Alamat }}</td>
+              <td>{{ x.Tempat_Lahir }}</td>
+              <td>{{ x.Tanggal_Lahir }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+
+      <script src="{% static 'bootstrap/js/bootstrap.min.js'%}"></script>
+</body>
+
+</html>
