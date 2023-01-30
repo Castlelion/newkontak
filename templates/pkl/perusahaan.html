@@ -11,49 +11,67 @@
 </head>
 
 <body>
-    
-    {% include 'pkl/layout/nav.html' %}
-    <h1 class="text-center mt-3">
-        Data Perusahaan
-    </h1>
-    <hr>
-    
-    <div class="container mt-5">
-        <div class="row">
-            <div class="">
-                <table class="table table-light table-hover table-striped">
-                    <thead>
-                        <tr>
-                            <th scope="col">No</th>
-                            <th scope="col">Nama</th>
-                            <th scope="col">Kategori</th>
-                            <th scope="col">Bidang</th>
-                            <th scope="col">alamat</th>
-                            <th scope="col">Nama PIC</th>
-                            <th scope="col">Jabatan</th>
-                            <th scope="col">No Telp</th>
-                            <th scope="col">Email</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {% for x in perusahaan %}
-                        <tr>
-                            <th scope="row">{{ forloop.counter }}</th>
-                            <td>{{ x.nama }}</td>
-                            <td>{{ x.kategori }}</td>
-                            <td>{{ x.bidang }}</td>
-                            <td>{{ x.alamat }}</td>
-                            <td>{{ x.nama_pic }}</td>
-                            <td>{{ x.jabatan }}</td>
-                            <td>{{ x.no_tlp }}</td>
-                            <td>{{ x.email }}</td>
-                        </tr>
-                        {% endfor %}
-                    </tbody>
-                </table>
-            </div>
 
-            <script src="{% static 'bootstrap/js/bootstrap.min.js'%}"></script>
+    {% include 'pkl/layout/nav.html' %}
+    <section class="p-4" id="main-content">
+        <button class="btn btn-primary" id="button-toggle">
+            <i class="bi-list"></i>
+        </button>
+
+
+        <h1 class="text-center">
+            Data Perusahaan
+        </h1>
+        <hr>
+
+        <div class="container mt-5">
+            <div class="row">
+                <div class="">
+                    <table class="table table-light table-hover table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col">No</th>
+                                <th scope="col">Nama</th>
+                                <th scope="col">Kategori</th>
+                                <th scope="col">Bidang</th>
+                                <th scope="col">alamat</th>
+                                <th scope="col">Nama PIC</th>
+                                <th scope="col">Jabatan</th>
+                                <th scope="col">No Telp</th>
+                                <th scope="col">Email</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for x in perusahaan %}
+                            <tr>
+                                <th scope="row">{{ forloop.counter }}</th>
+                                <td>{{ x.nama }}</td>
+                                <td>{{ x.kategori }}</td>
+                                <td>{{ x.bidang }}</td>
+                                <td>{{ x.alamat }}</td>
+                                <td>{{ x.nama_pic }}</td>
+                                <td>{{ x.jabatan }}</td>
+                                <td>{{ x.no_tlp }}</td>
+                                <td>{{ x.email }}</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+
+                <script src="{% static 'bootstrap/js/bootstrap.min.js'%}"></script>
+                <script>
+                    // event will be executed when the toggle-button is clicked
+                    document.getElementById("button-toggle").addEventListener("click", () => {
+
+                        // when the button-toggle is clicked, it will add/remove the active-sidebar class
+                        document.getElementById("sidebar").classList.toggle("active-sidebar");
+
+                        // when the button-toggle is clicked, it will add/remove the active-main-content class
+                        document.getElementById("main-content").classList.toggle("active-main-content");
+                    });
+                </script>
+    </section>
 </body>
 
 </html>

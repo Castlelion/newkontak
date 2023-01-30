@@ -1,4 +1,4 @@
-
+/* 
 
 a.vlink {
     color: #efefef;
@@ -65,4 +65,34 @@ ul {
     background: linear-gradient(to right, rgba(69, 72, 77, 1) 0%, rgba(0, 0, 0, 1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#45484d', endColorstr='#000000', GradientType=1);
     box-shadow: -6px 12px 5px 2px rgba(145, 145, 145, 0.5)
+} */
+
+
+li {
+    list-style: none;
+    margin: 20px 0 20px 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    margin-left: -300px;
+    transition: 0.4s;
+}
+
+.active-main-content {
+    margin-left: 250px;
+}
+
+.active-sidebar {
+    margin-left: 0;
+}
+
+#main-content {
+    transition: 0.4s;
 }
