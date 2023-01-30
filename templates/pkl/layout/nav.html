@@ -1,4 +1,7 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+{% load static %}
+<link rel="stylesheet" href="{% static 'styles.css' %}">
+<!-- <link rel="stylesheet" href="{% static 'bootstrap/bootstrap-icons-1.10.3/'%}"> -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"><!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
         <a class="navbar-brand" href="{% url 'home' %}">Home</a>
 
@@ -18,4 +21,23 @@
                 <a href="/admin/" class="btn btn-primary me-3">Admin</a>
         </div>
     </div>
-</nav>
+</nav> -->
+
+<div class="vh-100 d-flex align-items-center position-fixed start-0 top-0" role="navigation">
+    <div class="p-2">
+        <div id="mainNav">
+            <ul class="list-unstyled rounded ms-2">
+                <li><a class="vlink rounded border-0" href="{% url 'home' %}"><i class="bi-house-door"></i>
+                        <span>Home</span></a></li>
+                <li><a class="vlink rounded" href="{% url 'sekolah:sekolah' %}"><i class="bi-hospital"></i>
+                        <span>Sekolah</span></a></li>
+                <li><a class="vlink rounded" href="{% url 'siswa:siswa' %}"><i class="bi-person-circle"></i>
+                        <span>Siswa</span></a></li>
+                <li><a class="vlink rounded" href="{% url 'perusahaan:perusahaan' %}"><i
+                            class="bi-building"></i> <span>Perusahaan</span></a></li>
+                <li><a class="vlink rounded" href="/admin/"><i
+                            class="bi-person-fill"></i> <span>Admin</span></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
