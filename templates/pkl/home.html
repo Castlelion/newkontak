@@ -1,7 +1,6 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,13 +9,12 @@
     <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css'%}">
     <style>
         body {
-            background-color: rgba(227,242,253,255);
+            background-color: rgba(245, 245, 245, 0.76);
         }
     </style>
-
 </head>
-
 <body>
+    
     <center class="mt-5">
         <h1> Kontak </h1>
     </center>
@@ -24,27 +22,27 @@
         <div class="row">
             <div class="col-4">
                 <div class="card">
-                    <img src="/static/img/sekolah.png">
+                    <img src="/static/img/sekolah.png" class="rounded mx-auto d-block" >
                     <div class="card-body">
-                        <h5 class="card-title"> Data Sekolah </h5>
+                        <h5 class="card-title mt-2 "> Data Sekolah </h5>
                         <a href="{% url 'sekolah:sekolah' %}" class="btn btn-primary w-100 ">Sekolah</a>
                     </div>
                 </div>
             </div>
             <div class="col-4">
                 <div class="card">
-                    <img src="/static/img/siswa.png">
+                    <img src="/static/img/siswa.png" class="rounded mx-auto d-block">
                     <div class="card-body">
-                        <h5 class="card-title"> Data Siswa </h5>
+                        <h5 class="card-title mt-2"> Data Siswa </h5>
                         <a href="{% url 'siswa:siswa' %}" class="btn btn-primary w-100 ">Siswa</a>
                     </div>
                 </div>
             </div>
             <div class="col-4">
                 <div class="card">
-                    <img src="/static/img/median.png">
+                    <img src="/static/img/medians.png" class="rounded mx-auto d-block">
                     <div class="card-body">
-                        <h5 class="card-title"> Data Perusahaan </h5>
+                        <h5 class="card-title mt-2"> Data Perusahaan </h5>
                         <a href="{% url 'perusahaan:perusahaan' %}" class="btn btn-primary w-100 ">Perusahaan</a>
                     </div>
                 </div>
@@ -54,5 +52,4 @@
     <script src="{% static 'bootstrap/js/bootstrap.min.js'%}"></script>
 
 </body>
-
 </html>
