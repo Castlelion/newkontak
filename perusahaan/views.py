@@ -16,8 +16,3 @@ def perusahaan(request):
 
     } 
     return render(request, 'pkl/perusahaan.html', con)
-
-# class list_siswa(CreateView):
-#     model = Siswa
-#     fields = '__all__'
-#     success_url = reverse_lazy('')
