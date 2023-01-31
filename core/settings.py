@@ -46,11 +46,11 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-
     "home",
     "perusahaan",
     "sekolah",
     "siswa",
+    "rest_framework",
 ]
 
 MIDDLEWARE = [
@@ -97,7 +97,7 @@ DB_NAME     = os.getenv('DB_NAME'     , None)
 
 if DB_ENGINE and DB_NAME and DB_USERNAME:
     DATABASES = { 
-      'default': {
+        'default': {
         'ENGINE'  : 'django.db.backends.' + DB_ENGINE, 
         'NAME'    : DB_NAME,
         'USER'    : DB_USERNAME,
@@ -161,6 +161,11 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+REST_FRAMEWORK = {
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 10
+}
 
 LOGIN_REDIRECT_URL = '/'
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
