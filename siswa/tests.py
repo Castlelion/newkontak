@@ -30,3 +30,12 @@ class SiswaTestCase(TestCase):
         self.test_object.delete()
         with self.assertRaises(Siswa.DoesNotExist):
             Siswa.objects.get(id=self.test_object.id)
+<<<<<<< HEAD
+=======
+
+class ViewsTestCase(TestCase):
+    def test_index_loads_properly(self):
+        """The index page loads properly"""
+        response = self.client.get('your_server_ip:8000')
+        self.assertEqual(response.status_code, 404)
+>>>>>>> bd23c9c5fc8c54f9d306476961442b5ac213f27d
