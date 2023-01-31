@@ -1,0 +1,58 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'styles.css' %}">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+<!-- 
+<div class="vh-100 d-flex align-items-center position-fixed start-0 top-0" role="navigation">
+    <div class="p-2">
+        <div id="mainNav">
+            <ul class="list-unstyled rounded ms-2">
+                <li><a class="vlink rounded border-0" href="{% url 'home' %}"><i class="bi-house-door"></i>
+                        <span>Home</span></a></li>
+                <li><a class="vlink rounded" href="{% url 'sekolah:sekolah' %}"><i class="bi-hospital"></i>
+                        <span>Sekolah</span></a></li>
+                <li><a class="vlink rounded" href="{% url 'siswa:siswa' %}"><i class="bi-person-circle"></i>
+                        <span>Siswa</span></a></li>
+                <li><a class="vlink rounded" href="{% url 'perusahaan:perusahaan' %}"><i class="bi-building"></i>
+                        <span>Perusahaan</span></a></li>
+                <li><a class="vlink rounded" href="/admin/"><i class="bi-person-fill"></i> <span>Admin</span></a></li>
+            </ul>
+        </div>
+    </div>
+</div> -->
+
+<div>
+    <div class="sidebar p-4 bg-primary" id="sidebar">
+        <h4 class="mb-5 text-white">Kontak</h4>
+        <li>
+            <a class="text-white" href="{% url 'home' %}">
+                <i class="bi bi-house-door mr-2"></i>
+                Home
+            </a>
+        </li>
+        <li>
+            <a class="text-white" href="{% url 'sekolah:sekolah' %}">
+                <i class="bi-hospital mr-2"></i>
+                Sekolah
+            </a>
+        </li>
+        <li>
+            <a class="text-white" href="{% url 'siswa:siswa' %}">
+                <i class="bi-person-circle mr-2"></i>
+                Siswa
+            </a>
+        </li>
+        <li>
+            <a class="text-white" href="{% url 'perusahaan:perusahaan' %}">
+                <i class="bi-buildings mr-2"></i>
+                Perusahaan
+            </a>
+        </li>
+        <li>
+            <a class="text-white" href="/admin/">
+                <i class="bi-person-fill mr-2"></i>
+                Admin
+            </a>
+        </li>
+    </div>
+</div>

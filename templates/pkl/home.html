@@ -1,0 +1,55 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css'%}">
+    <style>
+        body {
+            background-color: rgba(245, 245, 245, 0.76);
+        }
+    </style>
+</head>
+<body>
+    
+    <center class="mt-5">
+        <img src="/static/img/kontak.png" alt="kontak">
+    </center>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-4">
+                <div class="card">
+                    <img src="/static/img/sekolah.png" class="rounded mx-auto d-block mt-3" >
+                    <div class="card-body">
+                        <h5 class="card-title mt-2 "> Data Sekolah </h5>
+                        <a href="{% url 'sekolah:sekolah' %}" class="btn btn-primary w-100 mt-3">Sekolah</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="card">
+                    <img src="/static/img/siswa.png" class="rounded mx-auto d-block mt-3">
+                    <div class="card-body">
+                        <h5 class="card-title mt-2"> Data Siswa </h5>
+                        <a href="{% url 'siswa:siswa' %}" class="btn btn-primary w-100 mt-3">Siswa</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="card">
+                    <img src="/static/img/medians.png" class="rounded mx-auto d-block mt-3">
+                    <div class="card-body">
+                        <h5 class="card-title mt-2"> Data Perusahaan </h5>
+                        <a href="{% url 'perusahaan:perusahaan' %}" class="btn btn-primary w-100 mt-3">Perusahaan</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="{% static 'bootstrap/js/bootstrap.min.js'%}"></script>
+
+</body>
+</html>

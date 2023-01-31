@@ -1,0 +1,84 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Sekolah</title>
+  <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css'%}">
+  <style>
+    h1 {
+      text-transform: uppercase;
+      font-family: 'Times New Roman', Times, serif;
+    }
+  </style>
+</head>
+
+<body>
+  {% include 'pkl/layout/nav.html' %}
+
+  <section class="p-4" id="main-content">
+    <button class="btn btn-primary" id="button-toggle">
+      <i class="bi-list"></i>
+    </button>
+
+    <h1 class="text-center">
+      Data Sekolah
+    </h1>
+    <hr>
+
+    <div class="container mt-5">
+      <div class="row">
+        <div class="">
+          <table class="table table-light table-hover table-striped">
+            <thead>
+              <tr>
+                <th scope="col">No</th>
+                <th scope="col">NPSN</th>
+                <th scope="col">Nama_SMK</th>
+                <th scope="col">Email</th>
+                <th scope="col">Telp</th>
+                <th scope="col">Alamat</th>
+                <th scope="col">Provinsi</th>
+                <th scope="col">Kabupaten_kota</th>
+                <th scope="col">Kecamatan</th>
+                <th scope="col">Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for x in sekolah %}
+              <tr>
+                <th scope="row">{{ forloop.counter }}</th>
+                <td>{{ x.NPSN }}</td>
+                <td>{{ x.Nama }}</td>
+                <td>{{ x.Email }}</td>
+                <td>{{ x.Telp }}</td>
+                <td>{{ x.Alamat }}</td>
+                <td>{{ x.Provinsi }}</td>
+                <td>{{ x.Kabupaten_Kota }}</td>
+                <td>{{ x.Kecamatan }}</td>
+                <td>{{ x.Status }}</td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+
+        <script src="{% static 'bootstrap/js/bootstrap.min.js'%}"></script>
+        <script>
+          // event will be executed when the toggle-button is clicked
+          document.getElementById("button-toggle").addEventListener("click", () => {
+
+            // when the button-toggle is clicked, it will add/remove the active-sidebar class
+            document.getElementById("sidebar").classList.toggle("active-sidebar");
+
+            // when the button-toggle is clicked, it will add/remove the active-main-content class
+            document.getElementById("main-content").classList.toggle("active-main-content");
+          });
+        </script>
+  </section>
+</body>
+
+</html>
