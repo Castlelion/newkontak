@@ -3,6 +3,6 @@ gunicorn
 python-dotenv
 whitenoise
 django-admin-berry==1.0.8
-djangorestframework
+
 # psycopg2-binary
 # mysqlclient

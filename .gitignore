@@ -1,4 +1,2 @@
-README_deploy.md
-docker-compose.yml
-gunicorn-cfg.py
-CHANGELOG.md
+Dockerfile
+render.yaml

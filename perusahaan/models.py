@@ -53,3 +53,7 @@ class Perusahaan(models.Model):
 
     class Meta:
         ordering = ['-id']
+        
+
+
+# Create your models here.
