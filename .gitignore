@@ -2,3 +2,11 @@ docker-compose.yml
 gunicorn-cfg.py
 db.sqlite3
 build.sh
+CHANGELOG.md
+Dockerfile
+env.sample
+LICENSE.md
+README.md
+README_deploy.md
+render.yaml
+requirements.txt
