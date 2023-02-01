@@ -1,3 +1,4 @@
 docker-compose.yml
 gunicorn-cfg.py
 db.sqlite3
+build.sh
