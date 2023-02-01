@@ -28,13 +28,7 @@ class Siswa(models.Model):
     update_at = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        return self.Nama
-
-    # def save (self, *args, **kwargs):
-    #     self.slug = slugify(self.Nama)
-    #     super(Siswa, self).save(*args, **kwargs)
+        return self.Nama 
 
     class Meta:
         ordering = ['-id']
-
-        
