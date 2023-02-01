@@ -1,2 +1,3 @@
 docker-compose.yml
 gunicorn-cfg.py
+db.sqlite3
